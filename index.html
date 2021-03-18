@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+      }
+
+      canvas {
+        position: absolute;
+      }
+
+      .row {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fps_meter" class="row side-by-side">
+      <div>
+        <label for="time">Time:</label>
+        <input disabled value="-" id="time" type="text" class="bold" />
+        <label for="fps">Estimated Fps:</label>
+        <input disabled value="-" id="fps" type="text" class="bold" />
+      </div>
+    </div>
+
+    <video id="video" width="720" height="560" autoplay muted></video>
+  </body>
+</html>
